@@ -159,6 +159,29 @@ justify-content: flex-end;
 }
 
 @media screen and (max-width: 978px) {
+
+.input{
+  margin-left: 150px;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin-bottom: 500px;
+  font-size: 55px;
+
+}
+
+.input button{
+  height: 50px;
+  width: 180px;
+  border-radius: 0;
+  background-color: #fa709a;
+}
+
+.input input{
+  height: 50px;
+  width: 180px;
+}
+
   .hero {
     padding-top: 30px;
   }
