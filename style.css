@@ -94,7 +94,7 @@ color:gray
   overflow: hidden;
   border: 10px solid rgb(255, 255, 255);
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-  animation: ava-animate 6s infinite alternate;
+  animation: ava-animate 11s infinite alternate;
 }
 
 
@@ -125,11 +125,11 @@ justify-content: flex-end;
 
 
 @keyframes ava-animate{
-  0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+  0% { border-radius: 47% 66% 48% 58% / 65% 60% 60% 55%  ;
   }
 
   30% {
-    border-radius:59% 41% 45% 55% / 58% 45% 55% 42% ;
+    border-radius:15% 20% 19% 22% / 12% 11% 55% 42% ;
   }
 
   60% {
