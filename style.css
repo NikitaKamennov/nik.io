@@ -119,11 +119,22 @@ h3 {
   background-color: #da81dd;
   border: 1px solid gray ;
   margin-bottom: 20px;
+  transition: background-color 1.1s ease 0s;
+
+
 }
 
 .input button:hover {
-
+background-color: #68be2e;
 }
+
+
+.input button:active {
+transform: scale(0.9);
+box-shadow: 2px 2px 1px 0.5px rgba(57, 57, 59, 0.2);
+}
+
+
 
 .wrapper {
   padding: 10px;
