@@ -23,11 +23,14 @@
     <input type="text" id="myText2" placeholder="Профессия">
     <button id="copyName1" onclick="document.querySelector('#text3').innerHTML = document.querySelector('#myText2').value" value="Copy Name1">Смонтировать</button>
 
-    <input type="text" id="myText3" placeholder="Немного о себе">
+    <input type="text"  id="myText3" placeholder="Немного о себе">
     <button id="copyName2" onclick="document.querySelector('#text4').innerHTML = document.querySelector('#myText3').value" value="Copy Name2">Смонтировать</button>
 
-     <input type="file" id="file1"  class="cnopka"/>
-     <button onclick="save()">Фото png</button>
+     <div class="wrepper_file">
+       <input  type="file" id="file1"  class="cnopka"/>
+       <button>Выбрать фото</button>  </div>
+       <button onclick="save()">Смонтировать</button>
+    
      
      <br>
      <script>
@@ -53,9 +56,8 @@
       
     </h1>
     <h2 class="hero__subtitle"> <div id="text2"></div> </h2>
-      <p id="text4" class="hero__description">
-        
-      </p>
+      <p class="posebe" id="text4" class="hero__description"> </p>
+
       <div class="hero__links">
         <a href="http://t.me/nikitakamennov" class="hero__link"><i class='bx bxl-telegram'></i></a>
         <a href="https://vk.com/hihilla" class="hero__link"><i class='bx bxl-vk' ></i></i></a>
