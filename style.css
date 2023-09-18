@@ -175,7 +175,10 @@ box-shadow: 2px 2px 1px 0.5px rgba(57, 57, 59, 0.2);
  padding: 0 10px;
 }
 
-
+.hero__link2{
+  text-decoration: none;
+  color: gray;
+}
 
 @keyframes ava-animate {
   0% {
