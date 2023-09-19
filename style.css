@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *,
 ::before,
 ::after {
@@ -145,8 +146,45 @@ box-shadow: 2px 2px 1px 0.5px rgba(57, 57, 59, 0.2);
   justify-content: flex-end;
 }
 
-@keyframes ava-animate{
-  0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+.posebe{
+  display: inline-block;
+  max-width:600px;
+  overflow: hidden;
+}
+
+.wrepper_file{
+
+  position: relative;
+}
+
+.cnopka{
+  position: absolute;
+  top: 17px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.wrepper_file button{
+ display: inline-flex;
+ min-height: 30px;
+ justify-content: center;
+ align-items: center;
+ padding: 0 10px;
+}
+
+.hero__link2{
+  text-decoration: none;
+  color: gray;
+  padding-left: 10px;
+}
+
+@keyframes ava-animate {
+  0% {
+    border-radius: 47% 66% 48% 58% / 65% 60% 60% 55%;
   }
 
   30% {
@@ -242,4 +280,3 @@ box-shadow: 2px 2px 1px 0.5px rgba(57, 57, 59, 0.2);
   .hero__box {
     min-width: 350px;
   }
-}
