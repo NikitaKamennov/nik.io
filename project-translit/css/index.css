@@ -99,6 +99,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 }
 
 .text{
+   
    margin-left: 10%;
    padding: 6px;
 }
@@ -163,7 +164,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
 
 
-@media screen and (max-width: 666px) {
+@media screen and (max-width: 1200px) {
  
    body {
       background-color: tomato;
@@ -236,7 +237,23 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
         height: 20px;
         color: black;
         background-color: antiquewhite;
+
+        
       
       }
 
+
+
+      .table__count{
+         padding: 28px 8px;
+      }
+      
+      .text{
+         
+         margin-left: 10%;
+         padding: 26px 0px 0px 0px;
+      }
+      
+
 }
+
