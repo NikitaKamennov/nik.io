@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/index.css" />
     <script defer src="./index.js"></script>
     <title>Транслит</title>
-</head>
-<body>
-<div class="wrapper">
-    <div class="title">
-        <div class="title__text"> T.R.A.N.S.L.I.T. </div>
-    </div>
-    <div class="inputbody">
-        <input class="input" type="text">
-        <button class="inputbody__btn" > Добавить </button>
-    </div>
-    <div class="dictionary">
-        <div class="dictionary__table">
-        <div class="table__left">
-    <div class="table__count ">1</div>
-    <div class="table__text__rusv text">мещерме</div>
-    </div>
-        <div class="table__right">
-            <div class="table__text__trans text"> mesherme</div>
-            <button class="table__right__btn">&#10006; </button>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title">
+        <div class="title__text">T.R.A.N.S.L.I.T.</div>
+      </div>
+      <div class="inputbody">
+        <input class="input" type="text" id="vvod" />
+        <button class="inputbody__btn" id="inputbody__btn">Добавить</button>
+      </div>
+
+      <div class="dictionary" id="dictionary">
+        <div class="hunit ramochki verh">
+          <div class="table__left" id="table__left">
+            <div class="table__count0">1</div>
+            <div class="table__text__rusv text">Привет &#128075;</div>
+          </div>
+          <div class="table__right">
+            <div class="table__text__trans text">Privet</div>
+            <button class="table__right__btn">
+              <img class="imgright" src="./icons/knopka krestik.svg" alt="" />
+            </button>
+          </div>
+
+          <div class="dictionary__table" id="dictionary__table">
+            <div class="wrapper__ydalyaper" id="wr_yd"></div>
+          </div>
         </div>
-        </div>
-            <button class="dictionary__btn"> <div class="dictionary__btn__decorate">&#10006;</div> <div>Очистить всё</div> </button>
+        <button class="dictionary__btn" id="dictionary__btn">
+          <div class="dictionary__btn__decorate">
+            <img src="./icons/knopka krestik.svg" alt="" />
+          </div>
+          <div>Очистить всё</div>
+        </button>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
