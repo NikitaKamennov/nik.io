@@ -1,51 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <script defer src="./index.js"></script>
-    <title>Транслит</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,700;1,300&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="title">
-        <div class="title__text">T.R.A.N.S.L.I.T.</div>
-      </div>
-      <div class="inputbody">
-        <input class="input" type="text" id="vvod" />
-        <button class="inputbody__btn" id="inputbody__btn">Добавить</button>
-      </div>
 
-      <div class="dictionary" id="dictionary">
-        <div class="hunit ramochki verh">
-          <div class="table__left" id="table__left">
-            <div class="table__count0">1</div>
-            <div class="table__text__rusv text">Привет &#128075;</div>
-          </div>
-          <div class="table__right">
-            <div class="table__text__trans text">Privet</div>
-            <button class="table__right__btn">
-              <img class="imgright" src="./icons/knopka krestik.svg" alt="" />
-            </button>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+ <link rel="stylesheet" href="style.css">
+</head>
+ <body>
 
-          <div class="dictionary__table" id="dictionary__table">
-            <div class="wrapper__ydalyaper" id="wr_yd"></div>
-          </div>
-        </div>
-        <button class="dictionary__btn" id="dictionary__btn">
-          <div class="dictionary__btn__decorate">
-            <img class="imjbtnall"  src="./icons/knopka krestik.svg" alt="" />
-          </div>
-          <div>Очистить всё</div>
-        </button>
+  <div class="input">
+
+     <input type="text" id="myText1" placeholder="Имя">
+     <button id="copyName" onclick="document.querySelector('#text2').innerHTML = document.querySelector('#myText1').value" value="Copy Name">Смонтировать</button>
+
+     <input type="text" id="myText2" placeholder="Профессия">
+     <button id="copyName1" onclick="document.querySelector('#text3').innerHTML = document.querySelector('#myText2').value" value="Copy Name1">Смонтировать</button>
+
+     <input type="text" id="myText3" placeholder="Немного о себе">
+     <button id="copyName2" onclick="document.querySelector('#text4').innerHTML = document.querySelector('#myText3').value" value="Copy Name2">Смонтировать</button>
+
+     <input type="file" id="file1" />
+     <button onclick="save()">Фото png</button>
+     
+     <br>
+     <script>
+         
+         function save ()  {
+             let f = file1.files[0];
+             if (f) {
+                 image1.src = URL.createObjectURL(f);
+                 localStorage.setItem('myImage', image1.src);
+             }
+         }
+         image1.src = localStorage.getItem('myImage')
+     </script>
+
+  </div>
+  
+
+
+<div class="hero">
+<div class="container hero__container">
+  <div class="hero__about">
+    <h1 id="text3" class="hero__title">
+      
+    </h1>
+    <h2 class="hero__subtitle"> <div id="text2"></div> </h2>
+      <p id="text4" class="hero__description">
+        
+      </p>
+      <div class="hero__links">
+        <a href="http://t.me/nikitakamennov" class="hero__link"><i class='bx bxl-telegram'></i></a>
+        <a href="https://vk.com/hihilla" class="hero__link"><i class='bx bxl-vk' ></i></i></a>
+       
       </div>
-    </div>
-  </body>
+  </div>
+  <div class="hero__box">
+    <img id="image1" width="500px" height="500px" />
+  </div>
+
+</div> 
+
+</body>
+
 </html>
