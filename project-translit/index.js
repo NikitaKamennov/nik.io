@@ -65,6 +65,8 @@ let alphrus = [
   "Э",
   "Ю",
   "Я",
+  "Ъ",
+  'Ь',
 ];
 
 let alphtrans = [
@@ -103,7 +105,7 @@ let alphtrans = [
   "ya",
   "A",
   "B",
-  "C",
+  "V",
   "G",
   "D",
   "E",
@@ -132,6 +134,8 @@ let alphtrans = [
   "E",
   "YU",
   "YA",
+  '"',
+  "'",
 ];
 
 let dic = [];
