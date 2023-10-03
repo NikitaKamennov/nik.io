@@ -58,38 +58,13 @@ strtrans = strtrans + dop[ran(0, dop.length-1)]
   // });
 
 
-
+strtrans = strtrans[0].toLocaleUpperCase() + strtrans.slice(1, strtrans.length)
 
 
   dic.push({ count: dic.length + 1, textru: vvod.value, texttra: strtrans }); //на всякий случай базочка сессии + использую её длинну для сквозных айдишников
 
   risovator(input, strtrans);
   vvod.value = "";
-});
-
-// то же что клик только на ентер
-
-const ent = document.body;
-
-ent.addEventListener("keyup", function (e) {
-  if (e.keyCode === 13) {
-    let input = document.getElementById("vvod").value;
-    let arrin = Array.from(input);
-    let strtrans = "";
-
-    arrin.forEach((index) => {
-      if (alphrus.indexOf(index) > 0) {
-        strtrans = strtrans + alphtrans[alphrus.indexOf(index)];
-      } else {
-        strtrans = strtrans + index;
-      }
-    });
-
-    dic.push({ count: dic.length + 1, textru: vvod.value, texttra: strtrans });
-
-    risovator(input, strtrans);
-    vvod.value = "";
-  }
 });
 
 
@@ -113,11 +88,11 @@ function risovator(input, strtrans) {
   div2.id = "table__count";
   document.getElementById("table__left" + count).append(div2);
 
-  const mediaQuery = window.matchMedia('(max-width: 1200px)')
+  const mediaQuery = window.matchMedia('(max-width: 100px)')
 
   if (input.length > 27 && !mediaQuery.matches) {
     let div3 = document.createElement("div");
-    div3.innerHTML = input.slice(0, 27) + " ...";
+    div3.innerHTML = input.slice(0, 20) + " ...";
     div3.classList.add("text");
     div3.id = "table__text__rusv" + count;
     document.getElementById("table__left" + count).append(div3);
@@ -140,9 +115,9 @@ function risovator(input, strtrans) {
   div4.id = "table__right" + count;
   document.getElementById("alert" + count).append(div4);
 
-  if (strtrans.length > 27 && !mediaQuery.matches) {
+  if (strtrans.length > 25 && !mediaQuery.matches) {
     let div5 = document.createElement("div");
-    div5.innerHTML = strtrans.slice(0, 37) + " ..."; // translit znachenie
+    div5.innerHTML = strtrans.slice(0, 25) + " ..."; // translit znachenie
     div5.classList.add("text");
     div5.classList.add("table__text__trans");
     div5.id = "table__text__trans" + count;
