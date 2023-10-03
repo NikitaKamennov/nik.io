@@ -162,9 +162,6 @@ body{
   display: none;
   white-space: wrap;
   background-color: white;
-  /* max-width: 200px;
-  max-height: 400px;
-  word-break: break-all; */
   cursor: pointer;
 
   border-radius: 15px;
@@ -174,6 +171,11 @@ body{
 .table__left:hover > .texthidden {
   display: block;
 }
+
+.table__left:active > .texthidden {
+  display: block;
+}
+
 
 .table__right {
   background-color: rgb(220, 230, 230);
@@ -227,163 +229,10 @@ body{
   transform: scale(0.9);
 }
 
-/* .verh {
-  overflow: hidden;
-  border-radius: 15px 15px 15px 15px;
-} */
-
-/* 
-
-@media screen and (max-width: 768px) {
-  .wrapper {
-    height: 768px;
-    width: 701px;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .wrapper {
-    width: 360px;
-    height: 664px;
-  }
-
-  .dictionary {
-    margin-top: 32px;
-  }
-
-  .wrapper__ydalyaper {
-    width: 330px;
-  }
-
-  .hunit {
-    display: flex;
-    flex-direction: column;
-    width: 328px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-
-  .unit {
-    display: flex;
-    flex-direction: column;
-    font-family: IBM Plex Mono;
-    text-align: center;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-  }
-
-  .title__text {
-    font-size: 36px;
-    font-weight: 800;
-    font-style: normal;
-  }
-
-  .inputbody {
-    border: 2px solid black;
-    border-radius: 7px;
-    max-width: 80%;
-  }
-
-  .table__count0 {
-    margin-top: 17px;
-  }
-
-  .input {
-    width: 60%;
-    font-size: 23px;
-    font-weight: 400;
-  }
-  .inputbody__btn {
-    height: 80%;
-    width: 30%;
-
-    font-size: px;
-  }
-
-  .table__text__trans {
-    padding-left: 20px;
-  }
-
-  .table__right {
-    padding-left: 40px;
-    max-height: 60px;
-  }
-
-  .table__left {
-    max-height: 60px;
-    border-right: 0px solid white;
-    
-  }
-
-  .table__left:first-child {
-   
-  }
-
-  .dictionary__btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 10px 16px 10px;
-    width: 180px;
-    height: 44px;
-    background-color: black;
-    color: aliceblue;
-    text-align: center;
-    font-size: 18px;
-    margin: 16px;
-  }
-
-  .table__right__btn {
-    position: relative;
-  }
-
-  .table__right__btn:active {
-    transform: scale(0.8);
-  }
-
-  .imgright {
-    height: 60px;
-    position: absolute;
-
-    bottom: 20px;
-    right: 10px;
-  }
-
-  .table__count {
-    padding: 28px 10px;
-  }
-
-  .text {
-    margin-left: 10%;
-    padding: 12px 15px 26px 0px;
-  }
-}
-
-
-
-
- 
-
-
-
-
-
- */
-
-
-
-
-
-
-
-/* 
-
 /* медиа запрос для онлайн проекта на мобильник реальное разрешение  хд */
 
 
-@media screen and (max-width: 1200px) {
+ @media screen and (max-width: 1200px) {
  
    body {
       background-color: tomato;
@@ -433,15 +282,7 @@ body{
       align-items: center;
     }
  
-   .hunit {
-     display: flex;
-     flex-direction: column;
-     width: 1050px;
-     display: flex;
-     flex-direction: column;
-     flex-wrap: nowrap;
-   }
- 
+
    .unit {
       width: 1130px;
      display: flex;
@@ -452,6 +293,7 @@ body{
      font-size: 18px;
      font-style: normal;
      font-weight: 400;
+     align-items: stretch
    }
  
 
@@ -459,31 +301,24 @@ body{
       font-size: 50px;
       margin-left: 10%;
       padding: 12px 15px 26px 0px;
+
     }
   
  
    .table__count {
      font-size: 48px;
    }
- 
-   .table__count0 {
-      margin-top: 17px;
-      font-size: 48px;
-    }
-  
+
  
    .table__text__trans {
      padding-left: 20px;
    }
- 
-   .table__right {
-   
-     padding-left: 40px;
-     max-height: 60px;
-   }
+
  
    .table__left {
-     max-height: 60px;
+    align-items: center;
+    overflow: visible;
+     max-width: 1050px;
      border-right: 0px solid white;
      border-top: 1px solid black;
    }
@@ -506,11 +341,35 @@ body{
      margin: 16px;
    }
    .table__right {
+   
+    align-items: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
       max-width: 1050px;
+      min-height: 200px;
       padding-left: 40px;
-      max-height: 60px;
+      height: 100%;
+      line-break: auto;
+
+    
     }
-  
+
+ 
+    .texthidden {
+      position: absolute;
+      bottom: 40px;
+      left: 20px;
+      padding: 8px 16px 10px 16px;
+      display: none;
+      white-space: wrap;
+      background-color: white;
+      cursor: pointer;
+      font-size: 50px;
+      line-height: 55px;
+      border-radius: 15px;
+      z-index: 3;
+    }
+    
    .table__right__btn {
      position: relative;
    }
@@ -534,5 +393,18 @@ body{
    .imjbtnall{
       width: 60px;
    }
+
+   
+.title__textm{
+
+  font-size: 55px;
+
+}
+
+.title__textv{
+  line-height: 43px;
+  font-size: 32px;
+  letter-spacing: 0.3px;
+}
  
 } 
