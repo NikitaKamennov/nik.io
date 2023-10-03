@@ -339,6 +339,7 @@ body{
      text-align: center;
      font-size: 40px;
      margin: 16px;
+     margin-top: 111px;
    }
    .table__right {
    
@@ -397,13 +398,13 @@ body{
    
 .title__textm{
 
-  font-size: 55px;
+  font-size: 45px;
 
 }
 
 .title__textv{
   line-height: 43px;
-  font-size: 32px;
+  font-size: 22px;
   letter-spacing: 0.3px;
 }
  
