@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>boggle</title>
+   <link rel="stylesheet" href="style.css">
+   <script defer src="./code.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="wrapper">
+    <div class="top">
+      <div class="top_words">10 LONGEST WORDS:</div>
+      <div class="list" id="top_words">
+        <p>1. WORDS</p>
+        <p>2. LUCK</p>
+        <p>3. ELBRUS </p>
+        <p>4. BEARS </p>
+      </div>
+    </div>
+    <div class="box_for_board_and_buttons">
+      <div id="board">
+        <div class="row">
+          <div class="cube" data-letter=""></div>
+          <div class="cube" data-letter=""></div>
+          <div class="cube" data-letter=""></div>
+          <div class="cube" data-letter=""></div>
+        </div>
+        <div class="row">      
+          <div class="cube" data-letter=""></div>
+          <div class="cube" data-letter=""></div>
+          <div class="cube" data-letter=""></div>
+          <div class="cube" data-letter=""></div>
+        </div>
+        <div class="row">
+          <div class="cube" data-letter=""></div>
+          <div class="cube" data-letter=""></div>
+          <div class="cube" data-letter=""></div>
+          <div class="cube" data-letter=""></div>
+        </div>
+        <div class="row">
+          <div class="cube" data-letter=""></div>
+          <div class="cube" data-letter=""></div>
+          <div class="cube" data-letter=""></div>
+          <div class="cube" data-letter=""></div>
+        </div>
+      </div> 
+      <div id="word"></div>
+      <div class="buttons">
+        <button id="check-word">CHECK THE WORD</button>
+         <button id="shuffleButton">MIX THE CUBES</button>
+      </div>
+    </div>
+    <div class="wrapper_wordscore">
+        <div id="countdown" class="countdown"></div>
+        <div id="composed-words" class="composed-words"></div>
+          <div id="totalscore"  class="totalscore">TOTAL POINTS: <div class="totalscore__value" id="totalsorevalue">0</div></div>   
+      </div> 
+   <div class="top">
+      <div class="top_players">TOP 10 PLAYERS:</div>
+      <div class="list">
+      <p>1. KAMENNOV NIKITA</p> 
+      <p>2. DOROVSKIKH ANTON</p>
+      <p>3. FILIPPOVA YULIYA</p>
+      <p>4. EREMINA OLGA</p>
+    </div>
+    </div>
+  </div>
+  
+  
+</div> 
+<button onclick="playMusic()"> <img src="" alt=""></button>
+<audio id="music" src="./files/super-mario-saundtrek.mp3">прррварврврвррпе</audio>
+
+<script>
+function playMusic() {
+  var audio = document.getElementById("music");
+  audio.play();
+}
+</script>
+<audio autoplay>
+  <source src="./files/super-mario-saundtrek.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+</body>
+</html>
