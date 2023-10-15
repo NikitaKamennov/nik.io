@@ -222,8 +222,9 @@ body {
 
 
 
-{
-.wrapper{flex-direction: column;
+
+.wrapper{
+flex-direction: column;
 min-width: 100%;
 margin: 0 auto;
 
